@@ -1,16 +1,18 @@
 import { useFormik } from "formik"
 import * as Yup from "yup"
+
 import { Input, Button } from "@chakra-ui/react"
 import { FormControl, FormLabel, FormErrorMessage } from "@chakra-ui/form-control"
 
 import { UserContext } from "../contexts/UserContext"
 import { useContext } from "react"
 
+
 const Login = () => {
 
   const {isLogged,setIsLogged} = useContext(UserContext)
 
-  const tafonctiondemort = () =>{
+  const userLogged = () =>{
     setIsLogged(false)
   }
 
@@ -66,7 +68,7 @@ const Login = () => {
         
         : 
         
-        <Button onClick={tafonctiondemort} colorScheme="teal" variant="solid" w="100%" mt={5}>
+        <Button onClick={userLogged} colorScheme="teal" variant="solid" w="100%" mt={5}>
             Log Out
         </Button>
       }
