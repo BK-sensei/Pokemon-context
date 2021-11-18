@@ -6,6 +6,8 @@ import NotFound from "./pages/NotFound"
 import Nav from "./components/Nav"
 import { Center } from "@chakra-ui/react"
 
+import UserContextProvider from "./components/UserContextProvider"
+
 const App = () => {
   return (
     <BrowserRouter>
