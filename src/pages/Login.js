@@ -6,11 +6,13 @@ import { FormControl, FormLabel, FormErrorMessage } from "@chakra-ui/form-contro
 
 import { UserContext } from "../contexts/UserContext"
 import { useContext } from "react"
-
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
   const {isLogged,setIsLogged} = useContext(UserContext)
+
+  let navigate = useNavigate()
 
   const userLogged = () =>{
     setIsLogged(false)
@@ -23,6 +25,8 @@ const Login = () => {
     },
     onSubmit: () => {
       setIsLogged(true)
+      navigate("/");
+  
     },
     validationSchema: Yup.object().shape({
       username: Yup.string()
