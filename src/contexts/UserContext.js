@@ -1,4 +1,4 @@
-import { createContext } from "react"
+import { createContext, useState } from "react"
 
 const UserContext = createContext({})
 
@@ -11,10 +11,11 @@ const UserContextProvider = (props) => {
       }
 
     return (
-        <UserContext.Provider value={value}>
-            {props.children}
+      <UserContext.Provider value={value}>
+        {props.children}
       </UserContext.Provider>
     );
 }
 
-export default UserContextProvider;
+export { UserContextProvider, UserContext } 
+  
