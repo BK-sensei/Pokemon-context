@@ -12,7 +12,8 @@ const Login = () => {
 
   const {isLogged,setIsLogged} = useContext(UserContext)
 
-  let navigate = useNavigate()
+  const navigate = useNavigate()
+  // useNavigate() est un hook
 
   const userLogged = () =>{
     setIsLogged(false)
